@@ -28,18 +28,23 @@
       console.log(answers[i]);
     }
 
-    // Word Generator
-    document.onkeydown = function (event) {
-      console.log(event.key)
-    }
 
+    // Random word generator
+    
     function characterAnswers () {
       var randomWord = answers[Math.floor (Math.random() * answers.length)];
       console.log (randomWord)
 
     }
 
-    
+    // Listener
+    document.onkeydown = function (event) {
+      console.log(event.key)
+    }
+
+   
+
+
     characterAnswers ()
     //Loops go here
     
