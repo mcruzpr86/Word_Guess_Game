@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!--Reset CSS stylesheet-->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!--Stylesheet link-->
@@ -31,8 +33,8 @@
       </header>  
 <br>
 <!--Table-->
-     <div>
-      <table class="table table-bordered font-color">
+     <div class="">
+      <table class="table table-bordered font-color ml1">
         <thead>
           <tr>
             
@@ -42,10 +44,11 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr class="tableheight">
             
             <th scope="row">Photo:</td>
-            <td scope="row">Guess:</td>
+            <td scope="row">Guess:
+            
             
           </tr>
           
@@ -60,26 +63,9 @@
      </div>
 
       
-    <script>
+    <script src="assets/javascript/game.js"></script>
 
-    //Javascript
-
-    var hints = ['Leader of the group', 'Has anger issues', 'Loves pizza', 'Gadget-wiz', 'Reporter', 'Master', 'Enemy of the turtles'];
-    var answers = ['Leonardo', 'Raphael', 'Michelangelo', 'Donatello', 'April', 'Splinter', 'Shredder'];
-
-    //console.log
-
-    for (var i = 0; i < hints.length; i++) {
-      console.log(hints[i]);
-    }
-
-    for (var i = 0; i < answers.length; i++) {
-      console.log(answers[i]);
-    }
-
-
-    </script>
-
-  </body>
+    
+ </body>
 
 </html>
