@@ -22,3 +22,12 @@ body {
 .tableheight {
     height: 500px;
 }
+
+.container {
+    margin-bottom: 10px;
+}
+
+.btn, .reset {
+    color: green;
+    background:white;
+}

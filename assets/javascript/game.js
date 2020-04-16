@@ -49,13 +49,37 @@
     //Loops go here
     
   document.onkeyup = function(event) {
-    var letter = String.fromCharCode(event.keycode).toLowerCase();
+    var startGame = String.fromCharCode(event.keycode).toLowerCase();
+    alert('The Game Has Begun');
+  
+  }
+
+  document.onkeyup = function(event) {
+    var startGame = String.fromCharCode(event.keycode).toLowerCase();
     alert('The Game Has Begun');
   
   }
 
 
   
+// Jims code to play with
+let btn = document.getElementById('btn');
+let counter = 0;
+
+btn.onclick = btnClick
+
+function btnClick() {
+	let text = document.getElementById('btn');
+  
+	counter++
+	text.innerText = 'I was clicked ' + counter +' times';
+}
+
+function reset() {
+  let text = document.getElementById('reset');
+  text.innerText = 'Restart Game'
+	counter = 0;
+}
 
 
 
