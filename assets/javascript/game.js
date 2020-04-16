@@ -11,7 +11,7 @@
 
     var hints = ['Leader of the group', 'Has anger issues', 'Loves pizza', 'Gadget-wiz', 'Reporter', 'Master', 'Enemy of the turtles'];
     var answers = ['Leonardo', 'Raphael', 'Michelangelo', 'Donatello', 'April', 'Splinter', 'Shredder'];
-    var guess = []
+    var guess = 'Leonardo'
     var lettersGuessed = []
     var guessesRemaining = []
     var wins = []
@@ -26,12 +26,12 @@
 
     for (var i = 0; i < answers.length; i++) {
       console.log(answers[i]);
-    }
+   }
 
 
     // Random word generator
     
-    function characterAnswers () {
+    function characterAnswers() {
       var randomWord = answers[Math.floor (Math.random() * answers.length)];
       console.log (randomWord)
 
@@ -45,10 +45,17 @@
    
 
 
-    characterAnswers ()
+  characterAnswers()
     //Loops go here
     
+  document.onkeyup = function(event) {
+    var letter = String.fromCharCode(event.keycode).toLowerCase();
+    alert('The Game Has Begun');
+  
+  }
 
+
+  
 
 
 
