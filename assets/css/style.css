@@ -30,4 +30,5 @@ body {
 .btn, .reset {
     color: green;
     background:white;
+    margin-top: 5px;
 }

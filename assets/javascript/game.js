@@ -56,7 +56,7 @@
 
   document.onkeyup = function(event) {
     var startGame = String.fromCharCode(event.keycode).toLowerCase();
-    alert('The Game Has Begun');
+    alert('COWABUNGA DUDES! The Game Has Begun');
   
   }
 
@@ -69,18 +69,24 @@ let counter = 0;
 btn.onclick = btnClick
 
 function btnClick() {
-	let text = document.getElementById('btn');
-  
-	counter++
-	text.innerText = 'I was clicked ' + counter +' times';
-}
+	var pic = "assets/images/leo.jpg"
+    document.getElementById('hintPics').src = pic.replace('90x90', '225x225');
+        document.getElementById('hintPics').style.display='block';
 
 function reset() {
   let text = document.getElementById('reset');
   text.innerText = 'Restart Game'
 	counter = 0;
 }
+ 
+//function picture() { 
+  //var pic = "assets/images/leo.jpg"
+  //document.getElementById('hintPics').src = pic.replace('90x90', '225x225');
+       // document.getElementById('hintPics').style.display='block';
 
+}
+
+document.getElementById("myelement1") = "Hello world!";
 
 
 
