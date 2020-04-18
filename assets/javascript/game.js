@@ -8,44 +8,41 @@
     // create guessing loops with the letters of the alphabet
     
    
-
-    var hints = ['Leader of the group', 'Has anger issues', 'Loves pizza', 'Gadget-wiz', 'Reporter', 'Master', 'Enemy of the turtles'];
-    var answers = ['Leonardo', 'Raphael', 'Michelangelo', 'Donatello', 'April', 'Splinter', 'Shredder'];
-    var guess = 'Leonardo'
-    var lettersGuessed = []
-    var guessesRemaining = []
-    var wins = []
-    var lifesLeft = []
+    var characters = ['Leonardo', 'Raphael', 'Michelangelo', 'Donatello'];
+    var answer = '';
+    var guessed = [];
+    var maxWrong = 6;
+    var mistakes = [];
+    let wordStatus = null;
 
 
     //console.log
 
-    for (var i = 0; i < hints.length; i++) {
-      console.log(hints[i]);
-    }
-
-    for (var i = 0; i < answers.length; i++) {
-      console.log(answers[i]);
+    for (var i = 0; i < characters.length; i++) {
+      console.log(characters[i]);
    }
 
 
     // Random word generator
     
     function characterAnswers() {
-      var randomWord = answers[Math.floor (Math.random() * answers.length)];
+      var randomWord = characters[Math.floor (Math.random() * characters.length)];
       console.log (randomWord)
 
     }
+
+    characterAnswers()
 
     // Listener
     document.onkeydown = function (event) {
       console.log(event.key)
     }
 
-   
+
+ 
 
 
-  characterAnswers()
+
     //Loops go here
     
   document.onkeyup = function(event) {
@@ -60,34 +57,40 @@
   
   }
 
-
+  function guessedWord() {
+    wordStatus = answer.split('').map(letter => (guessed.indexOf(letter) >= 0 ? letter : " _ ")).join('');
   
-// Jims code to play with
-let btn = document.getElementById('btn');
-let counter = 0;
+    document.getElementById('wordSpotlight').innerHTML = wordStatus;
+  }
 
-btn.onclick = btnClick
 
-function btnClick() {
-	var pic = "assets/images/leo.jpg"
-    document.getElementById('hintPics').src = pic.replace('90x90', '225x225');
-        document.getElementById('hintPics').style.display='block';
-
+//reset the game
 function reset() {
   let text = document.getElementById('reset');
   text.innerText = 'Restart Game'
 	counter = 0;
 }
  
-//function picture() { 
-  //var pic = "assets/images/leo.jpg"
-  //document.getElementById('hintPics').src = pic.replace('90x90', '225x225');
-       // document.getElementById('hintPics').style.display='block';
 
+ //Alphabet buttons
+document.getElementById('maxWrong').innerHTML = maxWrong;
+
+function generateButtons() {
+  let buttonsHTML = 'abcdefghijklmnopqrstuvwxyz'.split('').map(letter =>
+    `
+      <button
+        class="btn btn-lg btn-primary m-2"
+        id='` + letter + `'
+        onClick="handleGuess('` + letter + `')"
+      >
+        ` + letter + `
+      </button>
+    `).join('');
+
+  document.getElementById('keyboard').innerHTML = buttonsHTML;
 }
 
-document.getElementById("myelement1") = "Hello world!";
 
-
-
+generateButtons();
+guessedWord();
     

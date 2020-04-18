@@ -32,72 +32,28 @@
         
       </header>  
 <br>
-<!--Table
-     <div class="">
-      <table class="table table-bordered font-color ml1">
-        <thead>
-          <tr>
-            
-            <th scope="col">Hint:</th>
-            <th scope="col">Guess</th>
-            
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="tableheight">
-            
-            <th scope="row">Photo:</td>
-            <td scope="row">Guess:
-            
-            
-          </tr>
-          
-          <tr>
-            
-            <td colspan="2">Answer:</td>
-           
-            
-          </tr>
-        </tbody>
-      </table> -->
+     
 
-     <div class="container">
+      <div>
+        <img src="assets/images/Teenage_Mutant_Ninja_Turtles.jpg" class="hintPics" width="500px" alt="Responsive image" >
+     
+       </div>
 
-      <button type="button" class="btn" id="btn">
-        Click me
-      </button>
-      <br>
-      <button type="button" class="reset" id="reset" onclick="reset()">
-       
-         Reset
-       
-      </button>
+       <div class="container">
+        <h1 class="text-center ">Guess the Characters</h1>
+        <div class="float-right">Wrong Guesses: <span id='mistakes'>0</span> of <span id='maxWrong'></span></div>
+        <div class="text-center">
+          <br>
+          <br>
 
-     </div>
+          <p id="wordSpotlight">The word to be guessed goes here</p>
+          <div id="keyboard"></div>
+          <button class="btn btn-info" onClick="reset()">Reset</button>
+        </div> 
+      </div>
+      
 
-     </div>
-
-     <div>
-      <img src="assets/images/leo.jpg" class="hintPics" width="300px" alt="Responsive image" style="display:none">
-   
-     </div>
-
-     <!--<div>
-      <img src="assets/images/ralph.jpg" class="hintPics" width="300px" alt="Responsive image">
-   
-     </div>
-
-     <div>
-      <img src="assets/images/mikey.jpg" class="hintPics" width="300px" alt="Responsive image">
-   
-     </div>
-
-     <div>
-      <img src="assets/images/Donatello.jpg" class="hintPics" width="300px" alt="Responsive image">
-   
-     </div> -->
-
-     <p id="myelement1"></p>
+     
       
     <script src="assets/javascript/game.js"></script>
 
